@@ -1,0 +1,14 @@
+//SMART INNOVATIONS
+#include <LiquidCrystal.h> // first include the lcd library
+
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2); // pins used for lcd display in arduino
+
+void setup() {
+  lcd.begin(16, 2); // rows , columbs = 16,2
+  lcd.print("HELLO WORLD!"); // text will be displayed
+}
+
+
+void loop() {
+  lcd.setCursor(0, 1);
+  lcd.print(millis() / 1000);//count the active seconds in display
